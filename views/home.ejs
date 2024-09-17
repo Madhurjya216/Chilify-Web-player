@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chilify - Home</title>
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <script
+      src="https://kit.fontawesome.com/3f167df4c7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="main">
+      <div class="l-content">
+        <div class="app_navigate">
+          <div class="navigate_btn active">
+            <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+          </div>
+          <div class="navigate_btn">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+          </div>
+          <div class="navigate_btn">
+            <a href="#"><i class="fa-solid fa-heart"></i> Liked Songs</a>
+          </div>
+        </div>
+        <br />
+        <hr id="hr" />
+        <div class="song_list">
+          <h6>Discover your Zone</h6>
+        </div>
+      </div>
+      <div class="r-content"><button id="btn">menu</button></div>
+    </div>
+
+    <script>
+      const navLinks = document.querySelectorAll(".navigate_btn");
+
+      // Loop through each link and add a click event listener
+      navLinks.forEach((link) => {
+        link.addEventListener("click", function (event) {
+          // Prevent default page load behavior
+          event.preventDefault();
+
+          // Remove the 'active' class from all links
+          navLinks.forEach((link) => link.classList.remove("active"));
+
+          // Add the 'active' class to the clicked link
+          this.classList.add("active");
+          document.querySelectorAll(".navigate_btn a").style.color = "white";
+        });
+      });
+    </script>
+    <script src="../javascripts/script.js"></script>
+  </body>
+</html>

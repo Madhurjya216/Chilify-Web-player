@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=SUSE:wght@100..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=SUSE:wght@100..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 * {
   padding: 0;
@@ -33,7 +33,7 @@ input {
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
   font-size: 50px;
-  margin-bottom: 20px;;
+  margin-bottom: 20px;
 }
 
 .signup_form form {
@@ -79,4 +79,120 @@ input {
   color: wheat;
   cursor: pointer;
   font-weight: 800;
+}
+
+/* =========== Home ============= */
+#main {
+  display: flex;
+  position: relative;
+}
+
+.l-content {
+  width: 20%;
+  background: black;
+  color: white;
+  height: 100vh;
+  padding: 50px 30px;
+}
+
+.r-content {
+  width: 80%;
+}
+
+.navigate_btn {
+  margin: 10px 0;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.active {
+  background: rgba(48, 48, 48, 0.753);
+  color: white;
+}
+
+.navigate_btn a {
+  /* color: white; */
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.navigate_btn a i {
+  /* color: white; */
+  padding-right: 20px;
+}
+
+.navigate_btn a,
+i {
+  color: grey;
+}
+
+#hr {
+  color: red;
+  background: red;
+}
+
+.song_list {
+  margin-top: 30px;
+}
+
+.song_list h6 {
+  font-size: 23px;
+  font-weight: 900;
+  color: grey;
+  font-family: "Nunito", serif;
+  border-bottom: 1px dashed white;
+}
+
+/* ===== Media ===== */
+@media (max-width: 1460px) {
+  .navigate_btn a,
+  i {
+    font-size: 17px;
+  }
+
+  .song_list h6 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .navigate_btn a,
+  i {
+    font-size: 15px;
+  }
+
+  .l-content {
+    padding: 50px 20px;
+  }
+
+  .navigate_btn {
+    margin: 8px 0;
+    padding: 10px;
+  }
+
+  .song_list h6 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1072px) {
+  .l-content {
+    width: 240px;
+    padding: 50px 15px;
+  }
+
+  .navigate_btn a i {
+    /* color: white; */
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .l-content {
+    position: absolute;
+    left: -250px;
+  }
 }
